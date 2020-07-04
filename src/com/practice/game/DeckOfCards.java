@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class DeckOfCards {
-
 	
 	static HashMap<String,Integer> spadeCards = new HashMap<String,Integer>();
 	static HashMap<String,Integer> heartCards = new HashMap<String,Integer>();
