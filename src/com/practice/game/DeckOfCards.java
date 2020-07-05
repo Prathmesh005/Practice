@@ -79,14 +79,22 @@ public class DeckOfCards {
 	
 	public static void main(String[] args) {				
 
-		Scanner sc=new Scanner(System.in);
-		String cards=sc.next();		
-		if(checkSequence(cards.toUpperCase())) {
-			System.out.println("Cards in sequence");
-		}else {
-			if(!sequence) 
-				System.out.println("Cards not in sequence");
-		}
+		Scanner sc=null;
+		try {
+			sc=new Scanner(System.in);
+			String cards=sc.next();		
+			if(checkSequence(cards.toUpperCase())) {
+				System.out.println("Cards in a sequence");
+			}else {
+				if(!sequence) 
+					System.out.println("Cards not in a sequence");
+			}
+		}catch (Exception e) {
+			e.printStackTrace();			
+        }finally { 
+            sc.close(); 
+        }  
+		
 	}
 	
 	public static boolean checkSequence(String cards) {
