@@ -119,7 +119,7 @@ public class DeckOfCards {
 
 	private static boolean processRanksSequences(ArrayList<Integer> ranks) {
 
-		if(ranks.get(0) == 1 && ranks.size() > 1D && ranks.get(1) == 13) {
+		if(ranks.get(0) == 1 && ranks.size() > 1 && ranks.get(1) == 13) {
 			for(int i=2;i<ranks.size();i++) {
 				if(ranks.get(i) != ranks.get(i-1)-1) {
 					return false;
